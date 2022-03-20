@@ -1,0 +1,15 @@
+.banner__container {
+  margin: 53px 0px;
+  .banner__column {
+    display: flex;
+    background: #ffffff;
+    box-shadow: 5px 5px 20px  rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+    .banner__row {
+        width: 50%;
+    }
+    .tryIt_block {
+      background-color: #232222;
+    }
+  }
+}
