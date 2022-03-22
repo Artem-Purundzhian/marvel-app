@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 
 main {
-    max-width: 1140px;
-    padding: 0 20px;
-    margin: 0 auto;
-    overflow: hidden;
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 50px;
+  position: relative;
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 576px) {
+  main {
+    margin-top: 25px;
+  }
 }

@@ -1,5 +1,7 @@
 import AppHeader from "../appHeader/AppHeader";
 import AppBanner from "../appBanner/AppBanner";
+import CharInfo from "../charInfo/CharInfo";
+import CharList from "../charList/CharList";
 
 import "./app.scss";
 
@@ -8,7 +10,11 @@ const App = () => {
     <div className="app">
       <main>
         <AppHeader />
-        <AppBanner/>
+        <AppBanner />
+        <div className="wrapper">
+          <CharList />
+          <CharInfo />
+        </div>
       </main>
     </div>
   );

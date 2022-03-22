@@ -1,0 +1,31 @@
+.charList {
+  max-width: 65%;
+  .charList__container {
+    display: flex;
+    justify-content: column;
+    display: flex;
+    flex-wrap: wrap;
+    .char__card {
+      margin: 0 25px 30px 0;
+      .char__card__wrapper {
+        .char__img {
+          height: 200px;
+          img {
+            height: 200px;
+          }
+        }
+        .char__name__block {
+          background-color: #232222;
+          padding: 15px 15px 77px 15px;
+          .char__name {
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}
