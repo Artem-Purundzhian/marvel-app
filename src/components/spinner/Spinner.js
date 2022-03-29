@@ -1,6 +1,6 @@
 const Spinner = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" style={{margin: '0 auto', background: 'none', display: 'block', shapeRendering: 'auto'}} width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" style={{margin: 'auto auto', background: 'none', display: 'block', shapeRendering: 'auto', width: '100%'}} width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
         <rect x="19" y="19" width="20" height="20" fill="#5c5c5c">
           <animate attributeName="fill" values="#c43243;#5c5c5c;#5c5c5c" keyTimes="0;0.125;1" dur="1s" repeatCount="indefinite" begin="0s" calcMode="discrete"></animate>
         </rect><rect x="40" y="19" width="20" height="20" fill="#5c5c5c">

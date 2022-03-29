@@ -6,38 +6,45 @@ import MarvelService from "../../services/MarvelService";
 import "./appBanner.scss";
 
 class AppBanner extends Component {
-  constructor(props) {
-    super(props);
-    this.updateChar();
-  }
   state = {
     char: {},
     loading: true,
-    error: false
+    error: false,
   };
   noDescritptionTxt = "There is no description for this character";
   marvelService = new MarvelService();
-  onCharLoaded = (char) => {
-    this.setState({ char : {...char}, loading:false });
-  };
-  updateChar = () => {
-    const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
-    this.marvelService.getCharacter(id).then(charObj => this.onCharLoaded(charObj)).catch(this.onError);
-  };
 
-  onError = () =>{
-    this.setState({ loading:false, error: true });
+  componentDidMount() {
+    this.updateChar();
+    // this.timerId = setInterval(this.updateChar, 10000);
   }
 
+  componentWillUnmount() {
+    // clearInterval(this.timerId);
+  }
+
+  onCharLoaded = (char) => {
+    this.setState({ char: { ...char }, loading: false });
+  };
+
+  updateChar = () => {
+    const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
+    this.marvelService
+      .getCharacter(id)
+      .then((charObj) => this.onCharLoaded(charObj))
+      .catch(this.onError);
+  };
+
+  onError = () => {
+    this.setState({ loading: false, error: true });
+  };
+
   render() {
-    const {
-      char,
-      loading,
-      error
-    } = this.state;
-    const errorMessage = error ? <ErrorMessage/> : null;
-    const spinner = loading ? <Spinner/> : null;
-    const content = !(loading || error) ? <View char={char}/>: null;
+    console.log("render");
+    const { char, loading, error } = this.state;
+    const errorMessage = error ? <ErrorMessage /> : null;
+    const spinner = loading ? <Spinner /> : null;
+    const content = !(loading || error) ? <View char={char} /> : null;
     return (
       <div className="banner__container">
         <div className="banner__column">
@@ -75,7 +82,7 @@ class AppBanner extends Component {
 }
 
 const View = ({ char }) => {
-  const {name, description, thumbnail, homepage, wiki } = char;
+  const { name, description, thumbnail, homepage, wiki } = char;
   return (
     <div className="banner__row random_char">
       <div className="banner__img _img_random_char">
@@ -84,7 +91,7 @@ const View = ({ char }) => {
       <div className="banner__info">
         <div className="banner__info__title _title">{name}</div>
         <div className="banner__info__subtitle _subtitle">
-          {description}
+          {description ? description : 'There is no discription for this character'}
           <br />
           <br />
         </div>
