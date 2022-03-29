@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.18ffc37a.chunk.css",
-    "main.js": "./static/js/main.c3ded6da.chunk.js",
-    "main.js.map": "./static/js/main.c3ded6da.chunk.js.map",
+    "main.css": "./static/css/main.6ae2b6fa.chunk.css",
+    "main.js": "./static/js/main.d519cb7a.chunk.js",
+    "main.js.map": "./static/js/main.d519cb7a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.c7040397.js",
     "runtime-main.js.map": "./static/js/runtime-main.c7040397.js.map",
     "static/js/2.95f5669b.chunk.js": "./static/js/2.95f5669b.chunk.js",
     "static/js/2.95f5669b.chunk.js.map": "./static/js/2.95f5669b.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.18ffc37a.chunk.css.map": "./static/css/main.18ffc37a.chunk.css.map",
+    "static/css/main.6ae2b6fa.chunk.css.map": "./static/css/main.6ae2b6fa.chunk.css.map",
     "static/js/2.95f5669b.chunk.js.LICENSE.txt": "./static/js/2.95f5669b.chunk.js.LICENSE.txt",
     "static/media/abyss.5cdb2e18.jpg": "./static/media/abyss.5cdb2e18.jpg",
     "static/media/style.scss": "./static/media/bgAsset.dd4a45ad.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.c7040397.js",
     "static/js/2.95f5669b.chunk.js",
-    "static/css/main.18ffc37a.chunk.css",
-    "static/js/main.c3ded6da.chunk.js"
+    "static/css/main.6ae2b6fa.chunk.css",
+    "static/js/main.d519cb7a.chunk.js"
   ]
 }
