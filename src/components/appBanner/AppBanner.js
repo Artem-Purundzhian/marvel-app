@@ -40,7 +40,6 @@ class AppBanner extends Component {
   };
 
   render() {
-    console.log("render");
     const { char, loading, error } = this.state;
     const errorMessage = error ? <ErrorMessage /> : null;
     const spinner = loading ? <Spinner /> : null;
@@ -67,7 +66,7 @@ class AppBanner extends Component {
                     <h2 className="tryIt_block_Title">Or choose another one</h2>
                   </div>
                   <div className="banner__info__buttonContainer _buttonContainer">
-                    <div className="banner__button button__red _button">
+                    <div onClick={this.updateChar} className="banner__button button__red _button">
                       Try it
                     </div>
                   </div>
@@ -91,7 +90,7 @@ const View = ({ char }) => {
       <div className="banner__info">
         <div className="banner__info__title _title">{name}</div>
         <div className="banner__info__subtitle _subtitle">
-          {description ? description : 'There is no discription for this character'}
+          {description ? description : 'There is no description for this character'}
           <br />
           <br />
         </div>
